@@ -79,6 +79,7 @@ public class Flight {
         if(this.getEmptySeats() > 0) {
             this.passengers.add(passenger);
             this.emptySeats -= 1;
+            passenger.setFlight(this);
             return "Booked";
         }
         return "Flight Full";
