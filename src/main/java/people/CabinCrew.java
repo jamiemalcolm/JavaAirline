@@ -14,4 +14,8 @@ public class CabinCrew extends Person{
     public Rank getRank() {
         return this.rank;
     }
+
+    public String relayMessage(String message) {
+        return "Please " + message.toLowerCase();
+    }
 }
