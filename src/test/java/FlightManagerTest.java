@@ -4,6 +4,7 @@ import flight.Flight;
 import org.junit.Before;
 import org.junit.Test;
 import people.CabinCrew;
+import people.FlightManager;
 import people.Passenger;
 import people.Pilot;
 import plane.Plane;
@@ -12,8 +13,9 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
-public class FlightTest {
+public class FlightManagerTest {
 
+    FlightManager flightManager;
     Flight flight;
     Pilot pilot;
     Pilot pilot2;
@@ -47,62 +49,17 @@ public class FlightTest {
         testCrew.add(cabinCrew2);
         testCrew.add(cabinCrew3);
         flight = new Flight(testPilots, testCrew, plane, "FR455", "LAX", "EDN", "12.35pm");
+        flightManager = new FlightManager("Dan", flight);
+    }
+    @Test
+    public void setFlightManagerHasName(){
+        assertEquals("Dan", flightManager.getName());
+    }
+    @Test
+    public void canCalculateWeightReservedForOnePassenger(){
+        assertEquals(5, flightManager.calculateWeightAllowedForOnePassengersBags());
     }
 
-    @Test
-    public void hasPilots(){
-        assertEquals(3, flight.getNumPilots());
-    }
-    @Test
-    public void hasCabinCrew(){
-        assertEquals(3, flight.getNumCabinCrew());
-    }
-    @Test
-    public void hasPlane(){
-        assertEquals(plane, flight.getPlane());
-    }
-    @Test
-    public void hasFlightNum(){
-        assertEquals("FR455", flight.getFlightNum());
-    }
-    @Test
-    public void hasDestination(){
-        assertEquals("LAX", flight.getDestination());
-    }
-    @Test
-    public void hasDepartureAirport(){
-        assertEquals("EDN", flight.getDepartAirport());
-    }
-    @Test
-    public void hasDeptartureTime(){
-        assertEquals("12.35pm", flight.getDpartTime());
-    }
-    @Test
-    public void canGetNumPassangers(){
-        assertEquals(0, flight.getNumPassangers());
-    }
-    @Test
-    public void canShowAvailableSeats(){
-        assertEquals(2, flight.getEmptySeats());
-    }
-    @Test
-    public void canBookPassanger(){
-        flight.bookPassenger(passenger);
-        assertEquals(1, flight.getNumPassangers());
-    }
 
-    @Test
-    public void canBookPassengerLimit(){
-        flight.bookPassenger(passenger);
-        flight.bookPassenger(passenger2);
-        assertEquals(2, flight.getNumPassangers());
-        assertEquals(0, flight.getEmptySeats());
-    }
-    @Test
-    public void canNotBookoverPassengerLimit(){
-        flight.bookPassenger(passenger);
-        flight.bookPassenger(passenger2);
-        assertEquals("Flight Full", flight.bookPassenger(passenger3));
-    }
 
 }
