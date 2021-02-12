@@ -37,4 +37,8 @@ public class Flight {
     public int getNumCabinCrew() {
         return this.cabinCrew.size();
     }
+
+    public Plane getPlane() {
+        return this.plane;
+    }
 }
