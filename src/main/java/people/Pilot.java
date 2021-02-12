@@ -4,10 +4,14 @@ import enums.Rank;
 
 public class Pilot extends CabinCrew{
 
-    public String pilotLicence;
+    private String pilotLicence;
 
     public Pilot(String name, Rank rank, String pilotLicence){
         super(name, rank);
         this.pilotLicence = pilotLicence;
+    }
+
+    public String getLicence() {
+        return this.pilotLicence;
     }
 }
