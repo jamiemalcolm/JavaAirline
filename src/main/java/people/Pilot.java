@@ -1,4 +1,10 @@
 package people;
 
-public class Pilot {
+import enums.Rank;
+
+public class Pilot extends CabinCrew{
+
+    public Pilot(String name, Rank rank){
+        super(name, rank);
+    }
 }
