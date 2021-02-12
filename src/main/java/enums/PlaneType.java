@@ -1,6 +1,6 @@
 package enums;
 
-public enum planeType {
+public enum PlaneType {
     BOEING747(400, 300),
     BOEING737(200, 250),
     BOEING727(100, 150),
@@ -9,7 +9,7 @@ public enum planeType {
     private final int capacity;
     private final int weight;
 
-    planeType(int capacity, int weight) {
+    PlaneType(int capacity, int weight) {
         this.capacity = capacity;
         this.weight = weight;
     }
