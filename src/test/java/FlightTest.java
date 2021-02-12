@@ -46,7 +46,7 @@ public class FlightTest {
         testCrew.add(cabinCrew);
         testCrew.add(cabinCrew2);
         testCrew.add(cabinCrew3);
-        flight = new Flight(testPilots, testCrew, plane, "FR455", "LAX", "EDN", "12.35pm");
+        flight = new Flight(testPilots, testCrew, plane, "FR455", "LAX", "EDN", "2021-02-12T12:35:00" );
     }
 
     @Test
@@ -75,7 +75,7 @@ public class FlightTest {
     }
     @Test
     public void hasDeptartureTime(){
-        assertEquals("12.35pm", flight.getDpartTime());
+        assertEquals("2021-02-12T12:35:00", flight.getDpartTime());
     }
     @Test
     public void canGetNumPassangers(){

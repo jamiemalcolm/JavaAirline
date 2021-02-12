@@ -38,7 +38,7 @@ public class FlightManagerTest {
         cabinCrew3 = new CabinCrew("Fern", Rank.FLIGHTATTENDANT);
         plane = new Plane(PlaneType.TESTPLANE);
         passenger = new Passenger("Billy", 1);
-        passenger2 = new Passenger("Harry", 2);
+        passenger2 = new Passenger("Harry", 1);
         passenger3 = new Passenger("Sam", 3);
         ArrayList<Pilot> testPilots = new ArrayList<Pilot>();
         testPilots.add(pilot);
@@ -48,7 +48,7 @@ public class FlightManagerTest {
         testCrew.add(cabinCrew);
         testCrew.add(cabinCrew2);
         testCrew.add(cabinCrew3);
-        flight = new Flight(testPilots, testCrew, plane, "FR455", "LAX", "EDN", "12.35pm");
+        flight = new Flight(testPilots, testCrew, plane, "FR455", "LAX", "EDN", "2021-02-12T12:35:00");
         flightManager = new FlightManager("Dan", flight);
     }
     @Test
@@ -59,7 +59,16 @@ public class FlightManagerTest {
     public void canCalculateWeightReservedForOnePassenger(){
         assertEquals(5, flightManager.calculateWeightAllowedForOnePassengersBags());
     }
-
+    @Test
+    public void canCalculateWeightReservedFallAllPassengers(){
+        assertEquals(10, flightManager.bagadgeWeightAllowance());
+    }
+    @Test
+    public void canCalculateBagadgeAfterPassengerAdded(){
+        flight.bookPassenger(passenger);
+        flight.bookPassenger(passenger2);
+        assertEquals(0, flightManager.bagadgeWeightAllowance());
+    }
 
 
 }

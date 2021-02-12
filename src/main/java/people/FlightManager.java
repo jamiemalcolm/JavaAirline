@@ -15,4 +15,9 @@ public class FlightManager extends Person{
          int weightAllowance = this.flight.getPlane().getWeight() / 2;
          return weightAllowance / this.flight.getPlane().getCapacity();
     }
+
+    public int bagadgeWeightAllowance() {
+         int fullAllowance = this.flight.getPlane().getWeight() / 2;
+         return fullAllowance - this.flight.getNumPassangers() * this.calculateWeightAllowedForOnePassengersBags();
+    }
 }
