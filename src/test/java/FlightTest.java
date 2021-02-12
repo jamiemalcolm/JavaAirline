@@ -101,8 +101,7 @@ public class FlightTest {
     public void canNotBookoverPassengerLimit(){
         flight.bookPassenger(passenger);
         flight.bookPassenger(passenger2);
-        flight.bookPassenger(passenger3);
-        assertEquals(2, flight.getNumPassangers());
+        assertEquals("Flight Full", flight.bookPassenger(passenger3));
     }
-    
+
 }

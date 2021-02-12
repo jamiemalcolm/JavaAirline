@@ -66,9 +66,11 @@ public class Flight {
         return this.passengers.size();
     }
 
-    public void bookPassenger(Passenger passenger) {
+    public String bookPassenger(Passenger passenger) {
         if(this.getEmptySeats() > 0) {
             this.passengers.add(passenger);
+            return "Booked";
         }
+        return "Flight Full";
     }
 }
