@@ -77,16 +77,19 @@ public class FlightTest {
     public void hasDeptartureTime(){
         assertEquals("12.35pm", flight.getDpartTime());
     }
+    @Test
+    public void canGetNumPassangers(){
+        assertEquals(0, flight.getNumPassangers());
+    }
 //    @Test
-//    public void (){
-//
-//        assertEquals();
+//    public void canShowAvailableSeats(){
+//        assertEquals(400, flight.getEmptySeats());
 //    }
 //    @Test
-//    public void (){
-//
-//        assertEquals();
+//    public void canBookPassanger(){
+//        assertEquals(1, flight.getNumPassangers());
 //    }
+
 //    @Test
 //    public void (){
 //
