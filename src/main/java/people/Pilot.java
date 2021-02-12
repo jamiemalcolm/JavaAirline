@@ -14,4 +14,8 @@ public class Pilot extends CabinCrew{
     public String getLicence() {
         return this.pilotLicence;
     }
+
+    public String flyPlane() {
+        return "Wooosh!";
+    }
 }
