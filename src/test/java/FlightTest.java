@@ -1,3 +1,4 @@
+//import enums.DepartTimes;
 import enums.PlaneType;
 import enums.Rank;
 import flight.Flight;
@@ -8,6 +9,7 @@ import people.Passenger;
 import people.Pilot;
 import plane.Plane;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
@@ -46,7 +48,7 @@ public class FlightTest {
         testCrew.add(cabinCrew);
         testCrew.add(cabinCrew2);
         testCrew.add(cabinCrew3);
-        flight = new Flight(testPilots, testCrew, plane, "FR455", "LAX", "EDN", "2021-02-12T12:35:00" );
+        flight = new Flight(testPilots, testCrew, plane, "FR455", "LAX", "EDN", "12:35");
     }
 
     @Test
@@ -75,7 +77,7 @@ public class FlightTest {
     }
     @Test
     public void hasDeptartureTime(){
-        assertEquals("2021-02-12T12:35:00", flight.getDpartTime());
+        assertEquals("12:35", flight.getDpartTime());
     }
     @Test
     public void canGetNumPassangers(){

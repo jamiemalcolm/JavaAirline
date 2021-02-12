@@ -48,7 +48,7 @@ public class FlightManagerTest {
         testCrew.add(cabinCrew);
         testCrew.add(cabinCrew2);
         testCrew.add(cabinCrew3);
-        flight = new Flight(testPilots, testCrew, plane, "FR455", "LAX", "EDN", "2021-02-12T12:35:00");
+        flight = new Flight(testPilots, testCrew, plane, "FR455", "LAX", "EDN", "12.35");
         flightManager = new FlightManager("Dan", flight);
     }
     @Test

@@ -1,5 +1,6 @@
 package flight;
 
+//import enums.DepartTimes;
 import people.CabinCrew;
 import people.Passenger;
 import people.Pilot;
@@ -20,6 +21,10 @@ public class Flight {
     private ArrayList<Passenger> passengers;
     private int emptySeats;
 
+
+
+
+
     public Flight(ArrayList<Pilot> pilots, ArrayList<CabinCrew> cabinCrew, Plane plane, String flightNum,
                   String destination, String departAirport, String departTime){
         this.pilots = pilots;
@@ -31,6 +36,7 @@ public class Flight {
         this.departTime = departTime;
         this.passengers = new ArrayList<Passenger>();
         this.emptySeats = plane.getCapacity();
+
     }
 
     public int getNumPilots() {
