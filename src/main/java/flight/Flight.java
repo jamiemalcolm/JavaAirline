@@ -65,4 +65,8 @@ public class Flight {
     public int getNumPassangers() {
         return this.passengers.size();
     }
+
+    public void bookPassenger(Passenger passenger) {
+        this.passengers.add(passenger);
+    }
 }
