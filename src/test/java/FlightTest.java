@@ -34,7 +34,7 @@ public class FlightTest {
         cabinCrew = new CabinCrew("Frank", Rank.FLIGHTATTENDANT);
         cabinCrew2 = new CabinCrew("Fran", Rank.FLIGHTATTENDANT);
         cabinCrew3 = new CabinCrew("Fern", Rank.FLIGHTATTENDANT);
-        plane = new Plane(PlaneType.BOEING747);
+        plane = new Plane(PlaneType.TESTPLANE);
         passenger = new Passenger("Billy", 1);
         passenger2 = new Passenger("Harry", 2);
         passenger3 = new Passenger("Sam", 3);
@@ -83,7 +83,7 @@ public class FlightTest {
     }
     @Test
     public void canShowAvailableSeats(){
-        assertEquals(400, flight.getEmptySeats());
+        assertEquals(2, flight.getEmptySeats());
     }
     @Test
     public void canBookPassanger(){
@@ -91,9 +91,10 @@ public class FlightTest {
         assertEquals(1, flight.getNumPassangers());
     }
 
-//    @Test
-//    public void (){
-//
-//        assertEquals();
-//    }
+    @Test
+    public void canBookPassengerLimit(){
+        flight.bookPassenger(passenger);
+        flight.bookPassenger(passenger2);
+        assertEquals(2, flight.getNumPassangers());
+    }
 }

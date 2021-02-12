@@ -1,6 +1,7 @@
 package enums;
 
 public enum PlaneType {
+    TESTPLANE(2, 20),
     BOEING747(400, 300),
     BOEING737(200, 250),
     BOEING727(100, 150),
