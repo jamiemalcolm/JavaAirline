@@ -53,4 +53,48 @@ public class FlightTest {
     public void hasPilots(){
         assertEquals(3, flight.getNumPilots());
     }
+    @Test
+    public void hasCabinCrew(){
+        assertEquals(3, flight.getNumCabinCrew());
+    }
+//    @Test
+//    public void (){
+//
+//        assertEquals();
+//    }
+    //    @Test
+//    public void (){
+//
+//        assertEquals();
+//    }
+    //    @Test
+//    public void (){
+//
+//        assertEquals();
+//    }
+    //    @Test
+//    public void (){
+//
+//        assertEquals();
+//    }
+    //    @Test
+//    public void (){
+//
+//        assertEquals();
+//    }
+    //    @Test
+//    public void (){
+//
+//        assertEquals();
+//    }
+    //    @Test
+//    public void (){
+//
+//        assertEquals();
+//    }
+    //    @Test
+//    public void (){
+//
+//        assertEquals();
+//    }
 }
