@@ -10,4 +10,8 @@ public class CabinCrew extends Person{
         super(name);
         this.rank = rank;
     }
+
+    public Rank getRank() {
+        return this.rank;
+    }
 }
