@@ -13,9 +13,9 @@ public class CabinCrewTest {
 
     @Before
     public void before(){
-        cabinCrew = new CabinCrew("Frank", Rank.FLIGHTATTENDANT)
-        cabinCrew2 = new CabinCrew("Fran", Rank.FLIGHTATTENDANT)
-        cabinCrew3 = new CabinCrew("Fern", Rank.FLIGHTATTENDANT)
+        cabinCrew = new CabinCrew("Frank", Rank.FLIGHTATTENDANT);
+        cabinCrew2 = new CabinCrew("Fran", Rank.FLIGHTATTENDANT);
+        cabinCrew3 = new CabinCrew("Fern", Rank.FLIGHTATTENDANT);
     }
     @Test
     public void hasName(){
