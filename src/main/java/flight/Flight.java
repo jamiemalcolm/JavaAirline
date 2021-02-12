@@ -17,6 +17,7 @@ public class Flight {
     private String departAirport;
     private String departTime;
     private ArrayList<Passenger> passengers;
+    private int emptySeats;
 
     public Flight(ArrayList<Pilot> pilots, ArrayList<CabinCrew> cabinCrew, Plane plane, String flightNum,
                   String destination, String departAirport, String departTime){
@@ -28,6 +29,7 @@ public class Flight {
         this.departAirport = departAirport;
         this.departTime = departTime;
         this.passengers = new ArrayList<Passenger>();
+        this.emptySeats = plane.getCapacity();
     }
 
     public int getNumPilots() {
@@ -59,7 +61,7 @@ public class Flight {
     }
 
     public int getEmptySeats() {
-            return this.plane.getCapacity() - this.passengers.size();
+            return this.emptySeats;
     }
 
     public int getNumPassangers() {
@@ -69,6 +71,7 @@ public class Flight {
     public String bookPassenger(Passenger passenger) {
         if(this.getEmptySeats() > 0) {
             this.passengers.add(passenger);
+            this.emptySeats -= 1;
             return "Booked";
         }
         return "Flight Full";
