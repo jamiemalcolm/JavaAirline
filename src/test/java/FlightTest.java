@@ -81,10 +81,10 @@ public class FlightTest {
     public void canGetNumPassangers(){
         assertEquals(0, flight.getNumPassangers());
     }
-//    @Test
-//    public void canShowAvailableSeats(){
-//        assertEquals(400, flight.getEmptySeats());
-//    }
+    @Test
+    public void canShowAvailableSeats(){
+        assertEquals(400, flight.getEmptySeats());
+    }
 //    @Test
 //    public void canBookPassanger(){
 //        assertEquals(1, flight.getNumPassangers());
