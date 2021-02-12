@@ -73,11 +73,10 @@ public class FlightTest {
     public void hasDepartureAirport(){
         assertEquals("EDN", flight.getDepartAirport());
     }
-//    @Test
-//    public void (){
-//
-//        assertEquals();
-//    }
+    @Test
+    public void hasDeptartureTime(){
+        assertEquals("12.35pm", flight.getDpartTime());
+    }
 //    @Test
 //    public void (){
 //
