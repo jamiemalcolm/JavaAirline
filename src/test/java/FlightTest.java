@@ -69,11 +69,10 @@ public class FlightTest {
     public void hasDestination(){
         assertEquals("LAX", flight.getDestination());
     }
-//    @Test
-//    public void (){
-//
-//        assertEquals();
-//    }
+    @Test
+    public void hasDepartureAirport(){
+        assertEquals("EDN", flight.getDepartAirport());
+    }
 //    @Test
 //    public void (){
 //
