@@ -61,14 +61,14 @@ public class FlightTest {
     public void hasPlane(){
         assertEquals(plane, flight.getPlane());
     }
-//    @Test
-//    public void hasFlightNum(){
-//        assertEquals("FR455", flight.getFlightNum());
-//    }
-//    @Test
-//    public void hasDestination(){
-//        assertEquals("LAX", flight.getDestination());
-//    }
+    @Test
+    public void hasFlightNum(){
+        assertEquals("FR455", flight.getFlightNum());
+    }
+    @Test
+    public void hasDestination(){
+        assertEquals("LAX", flight.getDestination());
+    }
 //    @Test
 //    public void (){
 //

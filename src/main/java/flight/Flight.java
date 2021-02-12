@@ -41,4 +41,12 @@ public class Flight {
     public Plane getPlane() {
         return this.plane;
     }
+
+    public String getFlightNum() {
+        return this.flightNum;
+    }
+
+    public String getDestination() {
+        return this.destination;
+    }
 }
