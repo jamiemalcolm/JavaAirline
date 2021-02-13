@@ -10,7 +10,7 @@ import plane.Plane;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class PassengerTest {
 
@@ -69,8 +69,20 @@ public class PassengerTest {
         flight.bookPassenger(passenger);
         assertEquals(flight, passenger.getFlight());
     }
-//    @Test passenger canGetFlightDetailsOnceBooked(){
-//        flight.bookPassenger(passenger);
-//        assertEquals("LAX 2021-02-12, 12.35 FR455", passenger.GetFlightDetails());
-//    }
+    @Test
+    public void passengerCanGetFlightDetailsOnceBooked(){
+        flight.bookPassenger(passenger);
+        assertEquals("LAX 2021-02-12, 12.35 FR455", passenger.GetFlightDetails());
+    }
+    @Test
+    public void passengerHasSeatNumberAfterBooked(){
+        flight.bookPassenger(passenger);
+        assertTrue(passenger.getSeatNumber() != 0);
+    }
+    @Test
+    public void twoPassengersTwoSeatNums(){
+        flight.bookPassenger(passenger);
+        flight.bookPassenger(passenger2);
+        assertNotEquals(passenger.getSeatNumber(), passenger2.getSeatNumber());
+    }
 }

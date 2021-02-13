@@ -75,11 +75,16 @@ public class Flight {
         return this.passengers.size();
     }
 
+    public int generateSeatNum(){
+        return (int) ((Math.random()) * (this.getEmptySeats() - 1) + 1);
+    }
+
     public String bookPassenger(Passenger passenger) {
         if(this.getEmptySeats() > 0) {
             this.passengers.add(passenger);
             this.emptySeats -= 1;
             passenger.setFlight(this);
+            passenger.setSeatNumber(this.generateSeatNum());
             return "Booked";
         }
         return "Flight Full";

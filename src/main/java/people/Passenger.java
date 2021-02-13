@@ -36,4 +36,8 @@ public class Passenger extends Person{
     public void setFlight(Flight flight) {
         this.flight = flight;
     }
+
+    public void setSeatNumber(int seatNumber) {
+        this.seatNumber = seatNumber;
+    }
 }
